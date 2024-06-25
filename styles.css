@@ -1,0 +1,52 @@
+*  {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*Use 'margin: auto' for non flexbox/grid projects */
+
+
+/* Fits images in containers no matter the size */
+
+img {
+   max-width: 100%;
+   height: auto;
+}
+
+.canvas {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.pager-border {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pager-box {
+  width: 794px;
+  height: 252px;
+  border: 2px solid black;
+  padding-bottom: 27px;
+  margin: 15px 0 110px 0;
+
+}
+
+.phone-box {
+  width: 794px;
+  height: 916px;
+  border: 2px solid black;
+  margin-bottom: 20px;
+}
+
+.pager-text {
+  width: 737px;
+  height: 138px;
+  margin: 0 auto;
+  margin-top: 87px;;
+  border: 2px solid black;
+}
