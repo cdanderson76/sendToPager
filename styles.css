@@ -7,15 +7,6 @@
   font-family: "Press Start 2P", system-ui;
   font-size: 20px;
 }
-/*Use 'margin: auto' for non flexbox/grid projects */
-
-
-/* Fits images in containers no matter the size */
-
-img {
-   max-width: 100%;
-   height: auto;
-}
 
 .canvas {
   display: flex;
@@ -25,13 +16,14 @@ img {
   height: 100vh;
 }
 
-/* 144 difference */
-
 .pager-border {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 5px solid black;
+  padding: 30px 25px 22px 25px;
+  border-radius: 20px;
 }
 
 .pager-box {
@@ -56,15 +48,24 @@ img {
 }
 
 .pager-text-sent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 336.5px;
-  height: 90px;
+  height: 80px;
+  font-size: 25px;
   background-color: #9EC4B3;
+  color: #000000;
   margin: 0 auto;
 }
 
 .pager-text-typed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 336.5px;
   height: 148px;
+  font-size: 25px;
   background-color: #444444;
   color: #F8F8F8;
   margin: 22px 0 0 22px;
