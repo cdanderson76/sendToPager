@@ -1,8 +1,17 @@
 
 const inputText = document.getElementById('pager-text-typed');
+const sentText = document.getElementById('pager-text-sent');
+const dialPadNumbers = document.querySelectorAll('#dial-btn');
+
+const resetButton = document.getElementById('reset-btn');
+const sendButton = document.getElementById('send-btn');
+
+const audio = new Audio('assets/pager.wav')
 
 
 addEventListener('click', function(e) {
+
+    // Utilizing Data Attributes for Buttons
 
     const numberZero = e.target.dataset.zero;
     const numberOne = e.target.dataset.one;
@@ -47,15 +56,15 @@ addEventListener('click', function(e) {
     }
 
     if( numberEight ) {
-        inputText.textContent += '8';
+        inputText.textContent += numberEight;
     }
 
     if( numberNine ) {
-        inputText.textContent += '9';
+        inputText.textContent += numberNine;
     }
 
     if( numberZero ) {
-        inputText.textContent += '0';
+        inputText.textContent += numberZero;
     }
 
     if( star ) {
@@ -65,5 +74,39 @@ addEventListener('click', function(e) {
     if( pound ) {
         inputText.textContent += pound;
     }
+
+    if(inputText.textContent.length >= 10){
+        
+        dialPadNumbers.forEach(btn => {
+            btn.disabled = true;
+        })
+    }
 })
+
+// Clearing the Pager Displays
+
+
+resetButton.addEventListener('click', function() {
+    inputText.textContent = '';
+    sentText.textContent = '';
+    
+    dialPadNumbers.forEach(btn => {
+        btn.disabled = false;
+    })
+})
+
+// Sending the Page
+
+
+sendButton.addEventListener('click', function() {
+
+    function textDelay() {
+        sentText.textContent = inputText.textContent;
+
+        if(inputText.textContent)
+        audio.play();
+    }
+    setTimeout(textDelay, 2000);
+});
+
 

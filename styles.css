@@ -8,19 +8,43 @@
   font-size: 20px;
 }
 
-.canvas {
+/* Flex Containers Verticle and Center Aligned*/
+
+.canvas, 
+.pager.border,
+.pager-text-sent,
+.pager-text-typed {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Flex Containers 'justify-content: center' */
+
+.phone-box,
+.pager-title,
+.phone-title {
+  display: flex;
+  justify-content: center;
+}
+
+/* Like #F8F8F8F8 Colors */
+
+.pager-box,
+.pager-text-typed,
+.send-btn,
+.reset-btn {
+  color: #F8F8F8;
+
+}
+
+.canvas {
   width: 100%;
   height: 100vh;
 }
 
 .pager-border {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   border: 5px solid black;
   padding: 30px 25px 22px 25px;
   border-radius: 20px;
@@ -30,14 +54,11 @@
   width: 385px;
   height: 160px;
   background-color: #283033;
-  color: #F8F8F8;
   margin: 0 0 30px 0;
   padding-top: 26px;
 }
 
 .phone-box {
-  display: flex;
-  justify-content: center;
   flex-direction: column-reverse;
   width: 385px;
   height: 600px;
@@ -48,9 +69,6 @@
 }
 
 .pager-text-sent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 336.5px;
   height: 80px;
   font-size: 25px;
@@ -60,20 +78,14 @@
 }
 
 .pager-text-typed {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 336.5px;
   height: 148px;
   font-size: 25px;
   background-color: #444444;
-  color: #F8F8F8;
   margin: 22px 0 0 22px;
 }
 
 .pager-title {
-  display: flex;
-  justify-content: center;
   margin: -10px 0 23px 22px;
   margin-left: 22px;
   width: 336.5px;
@@ -81,8 +93,6 @@
 }
 
 .phone-title {
-  display: flex;
-  justify-content: center;
   margin-left: 22px;
   width: 336.5px;
   height: 40px;
@@ -105,18 +115,24 @@
   border: 2px solid black;
 }
 
-.number-box > button {
+.dial-btn {
   border: none;
+  cursor: pointer;
+}
+
+[disabled] {
+  background-color: #F0F0F0;
+  color: black;
 }
 
 .send-btn {
   margin: 0px 0px 18px 22px;
   background-color: #3D9C7C;
-  color: #F8F8F8;
+  cursor: pointer;
 }
 
 .reset-btn {
   margin: 18px 0 18px 22px;
   background-color: #BE482A;
-  color: #F8F8F8;
+  cursor: pointer;
 }
